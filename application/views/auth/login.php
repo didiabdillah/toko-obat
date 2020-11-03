@@ -5,7 +5,7 @@
                 <form action="" method="POST">
                     <div class="form-group">
                         <label>Username/Email address</label>
-                        <input type="text" class="form-control" placeholder="Email" name="email">
+                        <input type="text" class="form-control" placeholder="Username/Email" name="email">
                     </div>
                     <div class="form-group">
                         <label>Password</label>
