@@ -3,6 +3,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Auth extends CI_Controller
 {
+    public function __construct()
+    {
+        parent::__construct();
+
+        $this->load->model('Auth_model');
+    }
+
     public function index()
     {
         //Title
@@ -31,15 +38,15 @@ class Auth extends CI_Controller
 
     private function _login()
     {
-        $username = $this->input->post('username');
+        $email = $this->input->post('email');
         $password = $this->input->post('password');
 
-        $user  = $this->Auth_model->login($username);
+        $user  = $this->Auth_model->login($email);
 
         //usernya ada
         if ($user) {
             //usernya aktif
-            if ($username == $user["username"] || $username == $user["email"]) {
+            if ($email == $user["email"]) {
 
                 //cek password
                 if (password_verify($password, $user['password'])) {
@@ -54,7 +61,7 @@ class Auth extends CI_Controller
 
                     //Halaman yang di arahkan
                     if ($user['role_id'] == 1) {
-                        redirect('Admin');
+                        redirect('Dashboard');
                     } else {
                         redirect('auth');
                     }

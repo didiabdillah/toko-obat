@@ -3,11 +3,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Auth_model extends CI_model
 {
-    public function login($username)
+    public function login($email)
     {
-        $this->db->where('email', $username);
-        $this->db->or_where('username', $username);
-        $user = $this->db->get('admin')->row_array();
+        $this->db->where('email', $email);
+        $user = $this->db->get('users')->row_array();
 
         return $user;
     }
