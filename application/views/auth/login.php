@@ -1,6 +1,11 @@
 <div class="sufee-login d-flex align-content-center flex-wrap">
     <div class="container">
         <div class="login-content">
+            <div class="login-logo">
+                <a href="<?php echo base_url(); ?>">
+                    <h1 class="align-content">Nusantara Drugstore</h1>
+                </a>
+            </div>
             <div class="login-form">
                 <form action="" method="POST">
                     <div class="form-group">
