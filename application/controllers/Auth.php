@@ -23,7 +23,7 @@ class Auth extends CI_Controller
         }
 
         //Form Validation
-        $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
+        $this->form_validation->set_rules('email', 'Email', 'trim|required');
         $this->form_validation->set_rules('password', 'Password', 'trim|required');
 
         if ($this->form_validation->run() == false) {
@@ -46,7 +46,7 @@ class Auth extends CI_Controller
         //usernya ada
         if ($user) {
             //usernya aktif
-            if ($email == $user["email"]) {
+            if ($email == $user["email"] || $email == $user["username"]) {
 
                 //cek password
                 if (password_verify($password, $user['password'])) {

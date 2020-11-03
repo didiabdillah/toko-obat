@@ -6,6 +6,7 @@ class Auth_model extends CI_model
     public function login($email)
     {
         $this->db->where('email', $email);
+        $this->db->or_where('username', $email);
         $user = $this->db->get('users')->row_array();
 
         return $user;
