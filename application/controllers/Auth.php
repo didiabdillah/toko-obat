@@ -79,15 +79,15 @@ class Auth extends CI_Controller
         }
     }
 
-    public function lupapassword()
+    public function forgotpass()
     {
         //Title
-        $data['title'] = "Lupa Password - Auth";
+        $data['title'] = "Forgot Password - Auth";
 
         //Cek Ada Session Atau Tidak
         if ($this->session->userdata('username')) {
             if ($this->session->userdata('role_id') == 1) {
-                redirect('Admin');
+                redirect('Dashboard');
             }
         }
 
@@ -95,9 +95,9 @@ class Auth extends CI_Controller
         $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
 
         if ($this->form_validation->run() == false) {
-            $this->load->view('templates/Header', $data);
-            $this->load->view('auth/lupapassword', $data);
-            $this->load->view('templates/Footer');
+            $this->load->view('templates/auth_header', $data);
+            $this->load->view('auth/forgotpassword', $data);
+            $this->load->view('templates/auth_footer');
         } else {
             //jika validasi sukses
             $this->_resetpassword();
@@ -112,10 +112,9 @@ class Auth extends CI_Controller
 
         $nama = $Emaildb["nama"];
         $username = $Emaildb["username"];
-        $jabatan = $Emaildb["jabatan"];
 
         if ($Emaildb["email"] == $email) {
-            $this->_sendEmail($nama, $username, $email, $jabatan);
+            $this->_sendEmail($nama, $username, $email);
             $this->session->set_flashdata('message', '<div class="alert alert-warning" role="alert">Silahkan Periksa Email Untuk Ganti Password</div>');
             redirect('auth/lupapassword');
         } else {
@@ -124,7 +123,7 @@ class Auth extends CI_Controller
         }
     }
 
-    private function _sendEmail($nama, $username, $email, $jabatan)
+    private function _sendEmail($nama, $username, $email)
     {
         $config = [
             'protocol' => 'SMTP',
@@ -150,14 +149,14 @@ class Auth extends CI_Controller
         $this->load->library('email', $config);
         $this->email->initialize($config);
 
-        $this->email->from('dkm@jatisawit-lor.com', 'Masjid Baitul Muttaqien');
+        $this->email->from('dkm@jatisawit-lor.com', 'Exodus Drugstore');
         $this->email->to($to_email);
 
         $this->email->subject('Reset Password Verifikasi');
-        $this->email->message('Nama : ' . $nama . '<br>' . 'Username : ' . $username . '<br>' . 'Email : ' . $email . '<br>' . 'Jabatan : ' . $jabatan . '<br>' . 'Klik Link Reset Password : <a href="' . base_url() . 'Auth/resetpass?email=' . $to_email . '&token=' . urlencode($token) . '">Reset</a>');
+        $this->email->message('Nama : ' . $nama . '<br>' . 'Username : ' . $username . '<br>' . 'Email : ' . $email . '<br>' . 'Klik Link Reset Password : <a href="' . base_url() . 'Auth/resetpass?email=' . $to_email . '&token=' . urlencode($token) . '">Reset</a>');
 
         //Insert Token Ke Database
-        $this->db->insert('admin_token', $user_token);
+        $this->db->insert('reset_token', $user_token);
 
         if ($this->email->send()) {
             return true;
@@ -182,7 +181,7 @@ class Auth extends CI_Controller
 
                     redirect('auth/ubahpassword');
                 } else {
-                    $this->db->delete('admin_token', ['email' => $email]);
+                    $this->db->delete('reset_token', ['email' => $email]);
 
                     $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Reset Password Gagal, Token Kadaluarsa</div>');
                     redirect('auth/lupapassword');
@@ -218,9 +217,9 @@ class Auth extends CI_Controller
 
             $this->db->set('password', $password);
             $this->db->where('email', $email);
-            $this->db->update('admin');
+            $this->db->update('users');
 
-            $this->db->delete('admin_token', ['email' => $email]);
+            $this->db->delete('reset_token', ['email' => $email]);
             $this->session->unset_userdata('reset_email');
 
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Password Diganti</div>');

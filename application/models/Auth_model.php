@@ -14,21 +14,21 @@ class Auth_model extends CI_model
 
     public function _resetpassword($email)
     {
-        $Emaildb = $this->db->get_where('admin', ['email' => $email])->row_array();
+        $Emaildb = $this->db->get_where('users', ['email' => $email])->row_array();
 
         return $Emaildb;
     }
 
     public function resetpass($email)
     {
-        $user = $this->db->get_where('admin', ['email' => $email])->row_array();
+        $user = $this->db->get_where('users', ['email' => $email])->row_array();
 
         return $user;
     }
 
     public function resetpasstoken($token)
     {
-        $user_token = $this->db->get_where('admin_token', ['token' => $token])->row_array();
+        $user_token = $this->db->get_where('reset_token', ['token' => $token])->row_array();
 
         return $user_token;
     }

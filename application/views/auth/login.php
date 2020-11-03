@@ -3,7 +3,7 @@
         <div class="login-content">
             <div class="login-logo">
                 <a href="<?php echo base_url(); ?>">
-                    <h1 class="align-content">Nusantara Drugstore</h1>
+                    <h1 class="align-content">Exodus Drugstore</h1>
                 </a>
             </div>
             <div class="login-form">
@@ -18,7 +18,7 @@
                     </div>
                     <div class="checkbox">
                         <label class="pull-right">
-                            <a href="#">Forgotten Password?</a>
+                            <a href="<?php echo base_url('auth/forgotpass/'); ?>">Forgotten Password?</a>
                         </label>
 
                     </div>
