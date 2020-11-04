@@ -8,17 +8,17 @@
                  <i class="fa fa-bars"></i>
              </button>
              <a class="navbar-brand" href="./">Exodus Drugstore</a>
-             <a class="navbar-brand hidden" href="./">Exodus Drugstore</a>
+             <a class="navbar-brand hidden" href="./">Exo</a>
          </div>
 
          <div id="main-menu" class="main-menu collapse navbar-collapse">
              <ul class="nav navbar-nav">
-                 <li class="active">
+                 <li class="<?php if ($url == "Dashboard" || $url == "dashbaord") echo "active"; ?>">
                      <a href="<?php echo base_url('Dashboard/'); ?>"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
                  </li>
 
                  </li>
-                 <li class="active">
+                 <li class="<?php if ($url == "Obat" || $url == "obat") echo "active"; ?>">
                      <a href="<?php echo base_url('Obat/'); ?>"> <i class="menu-icon fa fa-table"></i>Data Obat</a>
                  </li>
 

@@ -1,0 +1,56 @@
+<div class="breadcrumbs">
+    <div class="container" style="margin-top: 20px;">
+
+        <a href="tambah-data.html"><button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-plus"></i> TAMBAH</button></a>
+        <hr>
+
+    </div>
+
+    <div class="content mt-3">
+        <div class="animated fadeIn">
+            <div class="row">
+
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong class="card-title">DATA OBAT</strong>
+                        </div>
+                        <div class="card-body">
+                            <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>NAMA OBAT</th>
+                                        <th>HARGA</th>
+                                        <th>JUMLAH</th>
+                                        <th>GAMBAR</th>
+                                        <th>AKSI</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Paramex</td>
+                                        <td>2000</td>
+                                        <td>2</td>
+                                        <td></td>
+                                        <td>
+                                            <button type="button" class="btn btn-warning m-l-10 m-b-10">Edit</button>
+
+                                            <button type="button" class="btn btn-danger m-l-10 m-b-10">Hapus</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div><!-- .animated -->
+    </div><!-- .content -->
+
+
+</div><!-- /#right-panel -->
+
+<!-- Right Panel -->
