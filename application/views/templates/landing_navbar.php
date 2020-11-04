@@ -43,6 +43,7 @@
               <!-- </ul> -->
               <!--  </li> -->
               <li class="<?php if ($url == "tentang" || $url == "Tentang") echo "active"; ?>"><a href="<?php echo base_url('tentang/'); ?>">Tentang</a></li>
+              <li><a href="<?php echo base_url('auth/'); ?>">Login</a></li>
               <!--  <li><a href="contact.html">Contact</a></li> -->
             </ul>
           </nav>
