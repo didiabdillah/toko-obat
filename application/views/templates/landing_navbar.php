@@ -1,9 +1,9 @@
 <div class="site-wrap">
 
 
-    <div class="site-navbar py-2">
+  <div class="site-navbar py-2">
 
-        <!-- <div class="search-wrap">
+    <!-- <div class="search-wrap">
 <div class="container">
   <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>
   <form action="#" method="post">
@@ -12,19 +12,19 @@
 </div>
 </div> -->
 
-        <div class="container">
-            <div class="d-flex align-items-center justify-content-between">
-                <div class="logo">
-                    <div class="site-logo">
-                        <a href="index.html" class="js-logo-clone">Exodus Drugstore</a>
-                    </div>
-                </div>
-                <div class="main-nav d-none d-lg-block">
-                    <nav class="site-navigation text-right text-md-center" role="navigation">
-                        <ul class="site-menu js-clone-nav d-none d-lg-block">
-                            <li class="active"><a href="index.html">Beranda</a></li>
-                            <li><a href="shop.html">Etalase</a></li>
-                            <!-- <li class="has-children">
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-between">
+        <div class="logo">
+          <div class="site-logo">
+            <a href="index.html" class="js-logo-clone">Exodus Drugstore</a>
+          </div>
+        </div>
+        <div class="main-nav d-none d-lg-block">
+          <nav class="site-navigation text-right text-md-center" role="navigation">
+            <ul class="site-menu js-clone-nav d-none d-lg-block">
+              <li class="active"><a href="<?php echo base_url(); ?>">Beranda</a></li>
+              <li><a href="<?php echo base_url('etalase/'); ?>">Etalase</a></li>
+              <!-- <li class="has-children">
           <a href="#">Dropdown</a>
           <ul class="dropdown">
             <li><a href="#">Supplements</a></li>
@@ -40,14 +40,14 @@
             <li><a href="#">Diet &amp; Nutrition</a></li>
             <li><a href="#">Tea &amp; Coffee</a></li> -->
 
-                            <!-- </ul> -->
-                            <!--  </li> -->
-                            <li><a href="about.html">Tentang</a></li>
-                            <!--  <li><a href="contact.html">Contact</a></li> -->
-                        </ul>
-                    </nav>
-                </div>
-                <!-- <div class="icons">
+              <!-- </ul> -->
+              <!--  </li> -->
+              <li><a href="<?php echo base_url('tentang/'); ?>">Tentang</a></li>
+              <!--  <li><a href="contact.html">Contact</a></li> -->
+            </ul>
+          </nav>
+        </div>
+        <!-- <div class="icons">
     <a href="#" class="icons-btn d-inline-block js-search-open"><span class="icon-search"></span></a>
     <a href="cart.html" class="icons-btn d-inline-block bag">
       <span class="icon-shopping-bag"></span>
@@ -56,6 +56,6 @@
     <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span
         class="icon-menu"></span></a>
   </div> -->
-            </div>
-        </div>
+      </div>
     </div>
+  </div>
