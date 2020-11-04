@@ -45,4 +45,12 @@ class Obat extends CI_Controller
         $this->load->view('admin/edit_obat', $data);
         $this->load->view('templates/admin_footer');
     }
+
+    public function update()
+    {
+    }
+
+    public function destroy()
+    {
+    }
 }
