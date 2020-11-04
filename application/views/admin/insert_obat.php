@@ -33,6 +33,15 @@
                     </div> -->
                 </div>
                 <div class="row form-group">
+                    <div class="col col-md-2"><label for="desc" class=" form-control-label">Deskripsi</label></div>
+                    <div class="col-12 col-md-10">
+                        <textarea id="desc" name="desc" placeholder="Deskripsi..." class="form-control"></textarea>
+                    </div>
+                    <!-- <div class="col-12 col-md-10">
+                        <span class="help-block">Enter Nama Obat</span>
+                    </div> -->
+                </div>
+                <div class="row form-group">
                     <div class="col col-md-2"><label for="gambar" class=" form-control-label">Gambar</label></div>
                     <div class="col-12 col-md-10">
                         <input type="file" id="gambar" name="gambar" placeholder="Banyak Stock Obat..." class="form-control">
