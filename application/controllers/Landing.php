@@ -7,8 +7,9 @@ class Landing extends CI_Controller
     {
         $data["title"] = "Exodus Drugstore";
 
-        // $this->load->view('templates/auth_llanding', $data);
+        $this->load->view('templates/landing_header', $data);
+        $this->load->view('templates/landing_navbar', $data);
         $this->load->view('landing/index', $data);
-        // $this->load->view('templates/auth_landing');
+        $this->load->view('templates/landing_footer');
     }
 }
