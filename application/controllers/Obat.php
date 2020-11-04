@@ -27,10 +27,10 @@ class Obat extends CI_Controller
 
         $data["url"] = $this->uri->segment(1);
 
-        $this->form_validation->set_rules('nama', 'Nama', 'required');
-        $this->form_validation->set_rules('harga', 'Harga', 'required');
-        $this->form_validation->set_rules('banyak', 'Banyak', 'required');
-        $this->form_validation->set_rules('desc', 'Deskripsi', 'required');
+        $this->form_validation->set_rules('nama', 'Nama', 'required|max_length[255]');
+        $this->form_validation->set_rules('harga', 'Harga', 'required|numeric');
+        $this->form_validation->set_rules('banyak', 'Banyak', 'required|numeric');
+        $this->form_validation->set_rules('desc', 'Deskripsi', 'required|max_length[65530]');
 
 
         if ($this->form_validation->run() == false) {
@@ -86,10 +86,10 @@ class Obat extends CI_Controller
         $data["url"] = $this->uri->segment(1);
         $data["obat"] = $this->Obat_model->getbyid($id);
 
-        $this->form_validation->set_rules('nama', 'Nama', 'required');
-        $this->form_validation->set_rules('harga', 'Harga', 'required');
-        $this->form_validation->set_rules('banyak', 'Banyak', 'required');
-        $this->form_validation->set_rules('desc', 'Deskripsi', 'required');
+        $this->form_validation->set_rules('nama', 'Nama', 'required|max_length[255]');
+        $this->form_validation->set_rules('harga', 'Harga', 'required|numeric');
+        $this->form_validation->set_rules('banyak', 'Banyak', 'required|numeric');
+        $this->form_validation->set_rules('desc', 'Deskripsi', 'required|max_length[65530]');
 
         if ($this->form_validation->run() == false) {
             $this->load->view('templates/admin_header', $data);
