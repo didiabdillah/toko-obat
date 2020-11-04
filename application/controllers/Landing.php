@@ -7,6 +7,8 @@ class Landing extends CI_Controller
     {
         $data["title"] = "Exodus Drugstore";
 
+        $data["url"] = $this->uri->segment(1);
+
         $this->load->view('templates/landing_header', $data);
         $this->load->view('templates/landing_navbar', $data);
         $this->load->view('landing/index', $data);

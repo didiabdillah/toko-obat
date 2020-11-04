@@ -22,8 +22,8 @@
         <div class="main-nav d-none d-lg-block">
           <nav class="site-navigation text-right text-md-center" role="navigation">
             <ul class="site-menu js-clone-nav d-none d-lg-block">
-              <li class="active"><a href="<?php echo base_url(); ?>">Beranda</a></li>
-              <li><a href="<?php echo base_url('etalase/'); ?>">Etalase</a></li>
+              <li class="<?php if ($url == NULL || $url == "landing" || $url == "Landing") echo "active"; ?>"><a href="<?php echo base_url(); ?>">Beranda</a></li>
+              <li class="<?php if ($url == "etalase" || $url == "Etalase") echo "active"; ?>"><a href="<?php echo base_url('etalase/'); ?>">Etalase</a></li>
               <!-- <li class="has-children">
           <a href="#">Dropdown</a>
           <ul class="dropdown">
@@ -42,7 +42,7 @@
 
               <!-- </ul> -->
               <!--  </li> -->
-              <li><a href="<?php echo base_url('tentang/'); ?>">Tentang</a></li>
+              <li class="<?php if ($url == "tentang" || $url == "Tentang") echo "active"; ?>"><a href="<?php echo base_url('tentang/'); ?>">Tentang</a></li>
               <!--  <li><a href="contact.html">Contact</a></li> -->
             </ul>
           </nav>
