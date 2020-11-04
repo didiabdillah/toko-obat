@@ -10,7 +10,8 @@ class Dashboard extends CI_Controller
         $data["url"] = $this->uri->segment(1);
 
         $this->load->view('templates/admin_header', $data);
-        // $this->load->view('templates/landing_navbar', $data);
+        $this->load->view('templates/admin_sidebar', $data);
+        $this->load->view('templates/admin_topbar', $data);
         $this->load->view('admin/dashboard', $data);
         $this->load->view('templates/admin_footer');
     }
