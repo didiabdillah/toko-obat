@@ -13,7 +13,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <center><strong class="card-title">SELAMAT DATANG</strong></center>
+                        <center><strong class="card-title">ADMIN</strong></center>
                     </div><br>
 
                 </div>

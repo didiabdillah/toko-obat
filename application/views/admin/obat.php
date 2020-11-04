@@ -32,7 +32,7 @@
                                         <td>Paramex</td>
                                         <td>2000</td>
                                         <td>2</td>
-                                        <td><img src="" alt=""></td>
+                                        <td><img src="https://dummyimage.com/600x400/000/fff.jpg&text=test" alt="" style="width: 75px; height: 50px;"></td>
                                         <td>
                                             <a href="<?php echo base_url('obat/edit/'); ?>" class="btn btn-warning m-l-10 m-b-10">Edit</a>
 
