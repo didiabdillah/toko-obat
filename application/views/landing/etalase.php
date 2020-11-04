@@ -1,15 +1,15 @@
 <div class="bg-light py-3">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 mb-0"><a href="<?php echo base_url(); ?>">Exodus Drugstore</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Etalase</strong></div>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 mb-0"><a href="<?php echo base_url(); ?>">Exodus Drugstore</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Etalase</strong></div>
     </div>
+  </div>
 </div>
 
 <div class="site-section">
-    <div class="container">
+  <div class="container">
 
-        <!-- <div class="row">
+    <!-- <div class="row">
           <div class="col-lg-6">
             <h3 class="mb-3 h6 text-uppercase text-black d-block">Filter by Price</h3>
             <div id="slider-range" class="border-primary"></div>
@@ -30,33 +30,33 @@
           </div>
         </div> -->
 
-        <div class="row">
-            <?php for ($i = 0; $i < 11; $i++) { ?>
-                <div class="col-sm-6 col-lg-4 text-center item mb-4">
-                    <!-- <span class="tag">Sale</span> -->
-                    <a href="shop-single.html"> <img src="<?php echo base_url('assets/'); ?>img/tolakangin.jpeg" alt="Image" style="width: 320px; height: 330px"></a>
-                    <h3 class="text-dark"><a href="<?php echo base_url('etalase/detail/') . "1"; ?>">Tolak Angin</a></h3>
-                    <p class="price">30.000</p>
-                </div>
-            <?php } ?>
+    <div class="row">
+      <?php for ($i = 0; $i < 11; $i++) { ?>
+        <div class="col-sm-6 col-lg-4 text-center item mb-4">
+          <!-- <span class="tag">Sale</span> -->
+          <a href="<?php echo base_url('etalase/detail/') . "1"; ?>"> <img src="<?php echo base_url('assets/'); ?>img/tolakangin.jpeg" alt="Image" style="width: 320px; height: 330px"></a>
+          <h3 class="text-dark"><a href="<?php echo base_url('etalase/detail/') . "1"; ?>">Tolak Angin</a></h3>
+          <p class="price">30.000</p>
+        </div>
+      <?php } ?>
 
-        </div>
-        <div class="row mt-5">
-            <div class="col-md-12 text-center">
-                <div class="site-block-27">
-                    <ul>
-                        <li><a href="#">&lt;</a></li>
-                        <li class="active"><span>1</span></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">&gt;</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
     </div>
+    <div class="row mt-5">
+      <div class="col-md-12 text-center">
+        <div class="site-block-27">
+          <ul>
+            <li><a href="#">&lt;</a></li>
+            <li class="active"><span>1</span></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&gt;</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 
