@@ -27,4 +27,13 @@ class Obat_model extends CI_model
 
         $this->db->insert('obat', $data);
     }
+
+    public function destroy($id)
+    {
+        $gambar = $this->db->get_where('obat', ['id' => $id])->row_array();
+
+        unlink(FCPATH . 'assets/img/etalase/' . $gambar["gambar"]);
+
+        $this->db->delete('obat', ['id' => $id]);
+    }
 }

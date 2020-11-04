@@ -97,7 +97,10 @@ class Obat extends CI_Controller
     {
     }
 
-    public function destroy()
+    public function destroy($id)
     {
+        $this->Obat_model->destroy($id);
+        $this->session->set_flashdata('message', '<div class="alert alert-warning" role="alert">Data Dihapus</div>');
+        redirect('obat');
     }
 }
