@@ -23,7 +23,7 @@ class Etalase extends CI_Controller
     public function detail($id)
     {
         $data["title"] = "Detail Product Exodus Drugstore";
-
+        $data["detail"] = $this->Etalase_model->getbyid($id);
         $data["url"] = $this->uri->segment(1);
 
         $this->load->view('templates/landing_header', $data);

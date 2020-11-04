@@ -7,4 +7,9 @@ class Etalase_model extends CI_model
     {
         return $this->db->get("obat")->result_array();
     }
+
+    public function getbyid($id)
+    {
+        return $this->db->get_where("obat", ['id' => $id])->row_array();
+    }
 }
