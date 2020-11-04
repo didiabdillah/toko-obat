@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 04 Nov 2020 pada 09.23
+-- Waktu pembuatan: 04 Nov 2020 pada 10.39
 -- Versi server: 10.4.13-MariaDB
 -- Versi PHP: 7.4.7
 
@@ -41,8 +41,9 @@ CREATE TABLE `obat` (
 --
 
 INSERT INTO `obat` (`id`, `nama`, `harga`, `stock`, `deskripsi`, `gambar`) VALUES
-(1, 'Cannabis', 111, 11, 'obat', 'd77753de5942ce0cac07d44616b6cb4d.png'),
-(2, 'Afetamin', 888, 22, 'Bukan obat', 'ab8cd4a65bcbd6d3797c752e6dc788d2.png');
+(5, 'Mefinal', 16000, 13, 'Mefinamic Acid 500 Gram', '52c166241e304bbd3db740445dad30bb.jpg'),
+(6, 'Amoxcillin', 7000, 14, 'Antibiotik Membunuh Bakteri', '1ffe29722d3144bd3c88d05b45b15c91.jpg'),
+(7, 'Paracetamol', 10000, 99, 'Obat Meredakan Sakit Kepala', '4b62a5e96bdcf47b4ca39b9dbfd67b20.jpg');
 
 -- --------------------------------------------------------
 
@@ -137,7 +138,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT untuk tabel `obat`
 --
 ALTER TABLE `obat`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT untuk tabel `reset_token`
