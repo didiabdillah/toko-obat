@@ -4,7 +4,7 @@
             <strong>Tambah Data Obat</strong>
         </div>
         <div class="card-body card-block">
-            <form action="<?php echo base_url('obat/insert/'); ?>" method="post" class="form-horizontal" enctype="multipart/form-data">
+            <form action="" method="post" class="form-horizontal" enctype="multipart/form-data">
                 <div class="row form-group">
                     <div class="col col-md-2"><label for="nama" class=" form-control-label">Nama Obat</label></div>
                     <div class="col-12 col-md-10">
