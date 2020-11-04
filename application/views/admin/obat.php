@@ -1,7 +1,7 @@
 <div class="breadcrumbs">
     <div class="container" style="margin-top: 20px;">
 
-        <a href="tambah-data.html"><button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-plus"></i> TAMBAH</button></a>
+        <a href="<?php echo base_url('obat/insert/'); ?>"><button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-plus"></i> TAMBAH</button></a>
         <hr>
 
     </div>
