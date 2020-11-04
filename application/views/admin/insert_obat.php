@@ -8,7 +8,8 @@
                 <div class="row form-group">
                     <div class="col col-md-2"><label for="nama" class=" form-control-label">Nama Obat</label></div>
                     <div class="col-12 col-md-10">
-                        <input type="text" id="nama" name="nama" placeholder="Nama Obat..." class="form-control">
+                        <input type="text" id="nama" name="nama" placeholder="Nama Obat..." class="form-control" value="<?= set_value('nama'); ?>">
+                        <?php echo form_error('nama', '<small class="text-danger pl-3">', '</small>'); ?>
                     </div>
                     <!-- <div class="col-12 col-md-10">
                         <span class="help-block">Enter Nama Obat</span>
@@ -17,7 +18,8 @@
                 <div class="row form-group">
                     <div class="col col-md-2"><label for="harga" class=" form-control-label">Harga Obat</label></div>
                     <div class="col-12 col-md-10">
-                        <input type="text" id="harga" name="harga" placeholder="Harga Obat..." class="form-control">
+                        <input type="text" id="harga" name="harga" placeholder="Harga Obat..." class="form-control" value="<?= set_value('harga'); ?>">
+                        <?php echo form_error('harga', '<small class="text-danger pl-3">', '</small>'); ?>
                     </div>
                     <!-- <div class="col-12 col-md-10">
                         <span class="help-block">Enter Nama Obat</span>
@@ -26,16 +28,18 @@
                 <div class="row form-group">
                     <div class="col col-md-2"><label for="banyak" class=" form-control-label">Banyak Stock</label></div>
                     <div class="col-12 col-md-10">
-                        <input type="text" id="banyak" name="banyak" placeholder="Banyak Stock Obat..." class="form-control">
+                        <input type="text" id="banyak" name="banyak" placeholder="Banyak Stock Obat..." class="form-control" value="<?= set_value('banyak'); ?>">
+                        <?php echo form_error('banyak', '<small class="text-danger pl-3">', '</small>'); ?>
                     </div>
-                    <!-- <div class="col-12 col-md-10">
+                    <!-- <div class=" col-12 col-md-10">
                         <span class="help-block">Enter Nama Obat</span>
                     </div> -->
                 </div>
                 <div class="row form-group">
                     <div class="col col-md-2"><label for="desc" class=" form-control-label">Deskripsi</label></div>
                     <div class="col-12 col-md-10">
-                        <textarea id="desc" name="desc" placeholder="Deskripsi..." class="form-control"></textarea>
+                        <textarea id="desc" name="desc" placeholder="Deskripsi..." class="form-control"><?= set_value('desc'); ?></textarea>
+                        <?php echo form_error('desc', '<small class="text-danger pl-3">', '</small>'); ?>
                     </div>
                     <!-- <div class="col-12 col-md-10">
                         <span class="help-block">Enter Nama Obat</span>
