@@ -3,6 +3,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Obat_model extends CI_model
 {
+    public function get()
+    {
+        $this->db->order_by('nama', 'ASC');
+        return $this->db->get('obat')->result_array();
+    }
+
     public function insert($datafile)
     {
         //Inisiasi Data Gambar
