@@ -31,12 +31,12 @@
         </div> -->
 
     <div class="row">
-      <?php for ($i = 0; $i < 11; $i++) { ?>
+      <?php foreach ($etalase as $row) { ?>
         <div class="col-sm-6 col-lg-4 text-center item mb-4">
           <!-- <span class="tag">Sale</span> -->
-          <a href="<?php echo base_url('etalase/detail/') . "1"; ?>"> <img src="<?php echo base_url('assets/'); ?>img/tolakangin.jpeg" alt="Image" style="width: 320px; height: 330px"></a>
-          <h3 class="text-dark"><a href="<?php echo base_url('etalase/detail/') . "1"; ?>">Tolak Angin</a></h3>
-          <p class="price">30.000</p>
+          <a href="<?php echo base_url('etalase/detail/') . $row["id"]; ?>"> <img src="<?php echo base_url('assets/img/etalase/') . $row["gambar"]; ?>" alt="Image" style="width: 320px; height: 330px"></a>
+          <h3 class="text-dark"><a href="<?php echo base_url('etalase/detail/') . $row["id"]; ?>"><?= $row["nama"]; ?></a></h3>
+          <p class="price">Rp. <?= $row["harga"]; ?></p>
         </div>
       <?php } ?>
 
