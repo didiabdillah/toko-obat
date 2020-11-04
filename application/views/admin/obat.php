@@ -21,9 +21,9 @@
                                     <tr>
                                         <th>NAMA OBAT</th>
                                         <th>HARGA</th>
-                                        <th>JUMLAH</th>
+                                        <th>JUMLAH STOCK</th>
                                         <th>GAMBAR</th>
-                                        <th>AKSI</th>
+                                        <th></th>
 
                                     </tr>
                                 </thead>
@@ -32,11 +32,11 @@
                                         <td>Paramex</td>
                                         <td>2000</td>
                                         <td>2</td>
-                                        <td></td>
+                                        <td><img src="" alt=""></td>
                                         <td>
-                                            <button type="button" class="btn btn-warning m-l-10 m-b-10">Edit</button>
+                                            <a href="<?php echo base_url('obat/edit/'); ?>" class="btn btn-warning m-l-10 m-b-10">Edit</a>
 
-                                            <button type="button" class="btn btn-danger m-l-10 m-b-10">Hapus</button>
+                                            <a href="<?php echo base_url('obat/destroy/'); ?>" class="btn btn-danger m-l-10 m-b-10">Delete</a>
                                         </td>
                                     </tr>
                                 </tbody>
