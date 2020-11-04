@@ -31,75 +31,15 @@
         </div> -->
 
         <div class="row">
-            <div class="col-sm-6 col-lg-4 text-center item mb-4">
-                <!-- <span class="tag">Sale</span> -->
-                <a href="shop-single.html"> <img src="images/tolakangin.jpeg" alt="Image" style="width: 320px; height: 330px"></a>
-                <h3 class="text-dark"><a href="shop-single.html">Tolak Angin</a></h3>
-                <p class="price">30.000</p>
-            </div>
-            <div class="col-sm-6 col-lg-4 text-center item mb-4">
-                <a href="shop-single.html"> <img src="images/promag.jpeg" alt="Image" style="width: 320px; height: 330px"></a>
-                <h3 class="text-dark"><a href="shop-single.html">Promag</a></h3>
-                <p class="price">15.000</p>
-            </div>
-            <div class="col-sm-6 col-lg-4 text-center item mb-4">
-                <a href="shop-single.html"> <img src="images/imboost.jpeg" alt="Image" style="width: 320px; height: 330px"></a>
-                <h3 class="text-dark"><a href="shop-single.html">Imboost Force</a></h3>
-                <p class="price">40.000</p>
-            </div>
+            <?php for ($i = 0; $i < 11; $i++) { ?>
+                <div class="col-sm-6 col-lg-4 text-center item mb-4">
+                    <!-- <span class="tag">Sale</span> -->
+                    <a href="shop-single.html"> <img src="<?php echo base_url('assets/'); ?>img/tolakangin.jpeg" alt="Image" style="width: 320px; height: 330px"></a>
+                    <h3 class="text-dark"><a href="<?php echo base_url('etalase/detail/') . "1"; ?>">Tolak Angin</a></h3>
+                    <p class="price">30.000</p>
+                </div>
+            <?php } ?>
 
-            <div class="col-sm-6 col-lg-4 text-center item mb-4">
-
-                <a href="shop-single.html"> <img src="images/paracetamol.jpeg" alt="Image" style="width: 320px; height: 330px"></a>
-                <h3 class="text-dark"><a href="shop-single.html">Paracetamol</a></h3>
-                <p class="price">15.000</p>
-            </div>
-            <div class="col-sm-6 col-lg-4 text-center item mb-4">
-                <a href="shop-single.html"> <img src="images/betadine.jpg" alt="Image" style="width: 320px; height: 330px"></a>
-                <h3 class="text-dark"><a href="shop-single.html">Betadine</a></h3>
-                <p class="price">20.000</p>
-            </div>
-            <div class="col-sm-6 col-lg-4 text-center item mb-4">
-                <!-- <span class="tag">Sale</span> -->
-                <a href="shop-single.html"> <img src="images/komix.jpg" alt="Image" style="width: 320px; height: 330px"></a>
-                <h3 class="text-dark"><a href="shop-single.html">Komix Herbal</a></h3>
-                <p class="price">20.000</p>
-            </div>
-
-            <div class="col-sm-6 col-lg-4 text-center item mb-4">
-                <!-- <span class="tag">Sale</span> -->
-                <a href="shop-single.html"> <img src="images/hansaplast.jpg" alt="Image" style="width: 320px; height: 330px"></a>
-                <h3 class="text-dark"><a href="shop-single.html">Hansaplast</a></h3>
-                <p class="price">8000</p>
-            </div>
-            <div class="col-sm-6 col-lg-4 text-center item mb-4">
-                <a href="shop-single.html"> <img src="images/minyak.jpg" alt="Image" style="width: 320px; height: 330px"></a>
-                <h3 class="text-dark"><a href="shop-single.html">Minyak Kayu Putih</a></h3>
-                <p class="price">12.000</p>
-            </div>
-            <div class="col-sm-6 col-lg-4 text-center item mb-4">
-                <a href="shop-single.html"> <img src="images/ester.jpg" alt="Image" style="width: 320px; height: 330px"></a>
-                <h3 class="text-dark"><a href="shop-single.html">Ester C</a></h3>
-                <p class="price">25.000</p>
-            </div>
-
-            <div class="col-sm-6 col-lg-4 text-center item mb-4">
-
-                <a href="shop-single.html"> <img src="images/panadol.jpg" alt="Image" style="width: 320px; height: 330px"></a>
-                <h3 class="text-dark"><a href="shop-single.html">Panadol</a></h3>
-                <p class="price">13.000</p>
-            </div>
-            <div class="col-sm-6 col-lg-4 text-center item mb-4">
-                <a href="shop-single.html"> <img src="images/salonpas.jpg" alt="Image" style="width: 320px; height: 330px"></a>
-                <h3 class="text-dark"><a href="shop-single.html">Salonpas</a></h3>
-                <p class="price">7000</p>
-            </div>
-            <div class="col-sm-6 col-lg-4 text-center item mb-4">
-                <!-- <span class="tag">Sale</span> -->
-                <a href="shop-single.html"> <img src="images/strepsils.jpg" alt="Image" style="width: 320px; height: 330px"></a>
-                <h3 class="text-dark"><a href="shop-single.html">Strepsils</a></h3>
-                <p class="price">38.000</p>
-            </div>
         </div>
         <div class="row mt-5">
             <div class="col-md-12 text-center">
