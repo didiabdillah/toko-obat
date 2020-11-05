@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 04 Nov 2020 pada 10.39
+-- Waktu pembuatan: 05 Nov 2020 pada 04.50
 -- Versi server: 10.4.13-MariaDB
 -- Versi PHP: 7.4.7
 
@@ -100,7 +100,9 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `nama`, `username`, `password`, `email`, `role_id`, `gambar`) VALUES
 (1, 'Jamal', 'jamal', '$2y$10$//9jEARMDpUz5Rr6OF9Q8.8S27CaHk0x4bUXN/EZEAH/84sua1zIS', 'sam.ali42069@gmail.com', 1, 'default.jpeg'),
-(2, 'Didi', 'didi', '$2y$10$//9jEARMDpUz5Rr6OF9Q8.8S27CaHk0x4bUXN/EZEAH/84sua1zIS', 'abdillah1965didiokey@gmail.com', 2, 'default.jpeg');
+(2, 'Didi', 'didi', '$2y$10$//9jEARMDpUz5Rr6OF9Q8.8S27CaHk0x4bUXN/EZEAH/84sua1zIS', 'abdillah1965didiokey@gmail.com', 2, 'default.jpeg'),
+(3, 'Igoy', 'igoy', '$2y$10$tdbF4o/WPvZqaw1BeIrMm.pLGkwEuDSDmLPzVa4ThLbTHQZNoEDre', 'igoy@gmail.com', 2, 'default.jpeg'),
+(4, 'Aisyah', 'aisyah', '$2y$10$vDndtWXriF03uxarSc48LuiVuBQLP/IwgV.IgR6zWOaTjdthqdnHa', 'asiyah@email.com', 2, 'default.jpeg');
 
 --
 -- Indexes for dumped tables
@@ -150,7 +152,7 @@ ALTER TABLE `reset_token`
 -- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
