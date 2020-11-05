@@ -286,7 +286,7 @@
                   </div> -->
 
             <div class="form-group">
-                <button class="btn btn-primary btn-lg btn-block" onclick="window.location='thankyou.html'">Place
+                <button class="btn btn-primary btn-lg btn-block" onclick="window.location='<?= base_url('purchase/success'); ?>'">Place
                     Order</button>
             </div>
 

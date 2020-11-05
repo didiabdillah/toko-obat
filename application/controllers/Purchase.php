@@ -32,4 +32,16 @@ class Purchase extends CI_Controller
         $this->load->view('purchase/checkout');
         $this->load->view('templates/landing_footer');
     }
+
+    public function success()
+    {
+        $data["title"] = "Success Exodus Drugstore";
+        $data["url"] = $this->uri->segment(1);
+        // $data["obat"] = $this->Obat_model->get();
+
+        $this->load->view('templates/landing_header', $data);
+        $this->load->view('templates/landing_navbar', $data);
+        $this->load->view('purchase/success');
+        $this->load->view('templates/landing_footer');
+    }
 }
