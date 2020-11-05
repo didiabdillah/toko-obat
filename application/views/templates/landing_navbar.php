@@ -43,7 +43,21 @@
               <!-- </ul> -->
               <!--  </li> -->
               <li class="<?php if ($url == "tentang" || $url == "Tentang") echo "active"; ?>"><a href="<?php echo base_url('tentang/'); ?>">Tentang</a></li>
-              <li><a href="<?php echo base_url('auth/'); ?>">Login</a></li>
+              <li><?php if ($this->session->userdata("role_id") == 1) { ?>
+                  <a href="<?php echo base_url('dashboard/'); ?>"><?php echo $this->session->userdata("nama"); ?></a>
+                <?php } else if ($this->session->userdata("role_id") == 2) { ?>
+                  <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <?php echo $this->session->userdata("nama"); ?>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="<?= base_url('auth/logout'); ?>">Logout</a>
+                    </div>
+                  </div>
+                <?php } else { ?>
+                  <a href="<?php echo base_url('auth/'); ?>">Login</a>
+                <?php } ?>
+              </li>
               <!--  <li><a href="contact.html">Contact</a></li> -->
             </ul>
           </nav>
