@@ -17,7 +17,8 @@
                 <div class="site-section-heading pt-3 mb-4" >
                     <h2 class="text-black">Tentang Exodus Drugstore</h2>
                 </div>
-                <p>Exodus Dragstore adalah perusahaan industri farmasi pertama di Indonesia yang didirikan oleh Pemerintah Hindia Belanda tahun 1817. Nama perusahaan ini pada awalnya adalah NV Chemicalien Handle Rathkamp & Co. Berdasarkan kebijaksanaan nasionalisasi atas eks perusahaan Belanda di masa awal kemerdekaan, pada tahun 1958, Pemerintah Republik Indonesia melakukan peleburan sejumlah perusahaan farmasi menjadi PNF (Perusahaan Negara Farmasi). Kemudian pada tanggal 16 Agustus 1971, bentuk badan hukum PNF diubah menjadi Perseroan Terbatas, sehingga nama perusahaan berubah menjadi Exodus Drugstore.</p>
+
+                <p align="justify">Exodus Dragstore adalah perusahaan industri farmasi pertama di Indonesia yang didirikan oleh Pemerintah Hindia Belanda tahun 1817. Nama perusahaan ini pada awalnya adalah NV Chemicalien Handle Rathkamp & Co. Berdasarkan kebijaksanaan nasionalisasi atas eks perusahaan Belanda di masa awal kemerdekaan, pada tahun 1958, Pemerintah Republik Indonesia melakukan peleburan sejumlah perusahaan farmasi menjadi PNF (Perusahaan Negara Farmasi). Kemudian pada tanggal 16 Agustus 1971, bentuk badan hukum PNF diubah menjadi Perseroan Terbatas, sehingga nama perusahaan berubah menjadi Exodus Drugstore.</p>
             </div>
         </div>
     </div>
@@ -42,12 +43,13 @@
                 <div class="site-section-heading pt-3 mb-4">
                     <h2 class="text-black">VISI DAN MISI</h2>
                 </div>
+                <
                 <p class="text-black">VISI</p>
-                <p class="text-black">Menjadi perusahaan Healthcare pilihan utama yang terintegrasi dan menghasilkan nilai yang berkesinambungan.</p>
-                <p class="text-black">MISI</p>
-                <p class="text-black">1. Melakukan aktivitas usaha di bidang-bidang industri kimia dan farmasi, perdagangan dan jaringan distribusi, ritel farmasi dan layanan kesehatan serta optimalisasi aset.</p>
-                <p class="text-black">2. Mengelola perusahaan secara Good Corporate Governance dan operational excellence didukung oleh Sumber Daya Manusia (SDM) profesional.</p>
-                <p class="text-black">3. Memberikan nilai tambah dan manfaat bagi seluruh stakeholder.</p>
+                <p class="text-black" align="justify">Menjadi perusahaan Healthcare pilihan utama yang terintegrasi dan menghasilkan nilai yang berkesinambungan.</p>
+                <p class="text-black" align="justify">MISI</p>
+                <p class="text-black" align="justify">1. Melakukan aktivitas usaha di bidang-bidang industri kimia dan farmasi, perdagangan dan jaringan distribusi, ritel farmasi dan layanan kesehatan serta optimalisasi aset.</p>
+                <p class="text-black" align="justify">2. Mengelola perusahaan secara Good Corporate Governance dan operational excellence didukung oleh Sumber Daya Manusia (SDM) profesional.</p>
+                <p class="text-black" align="justify">3. Memberikan nilai tambah dan manfaat bagi seluruh stakeholder.</p>
 
             </div>
         </div>
