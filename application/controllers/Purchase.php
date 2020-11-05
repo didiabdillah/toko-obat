@@ -11,6 +11,13 @@ class Purchase extends CI_Controller
 
     public function add_to_cart()
     {
+        $data = [
+            "user_id" => $this->session->userdata('id'),
+            "qty" => $this->input->post('qty'),
+            "obat_id" => $this->input->post('obat_id')
+        ];
+
+        $this->Purchase_model->add_to_cart($data);
     }
 
     public function cart()
