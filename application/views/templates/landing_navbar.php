@@ -16,13 +16,13 @@
       <div class="d-flex align-items-center justify-content-between">
         <div class="logo">
           <div class="site-logo">
-            <a href="index.html" class="js-logo-clone">Exodus Drugstore</a>
+            <a href="<?php echo base_url(); ?>" class="js-logo-clone">Exodus Drugstore</a>
           </div>
         </div>
         <div class="main-nav d-none d-lg-block">
           <nav class="site-navigation text-right text-md-center" role="navigation">
             <ul class="site-menu js-clone-nav d-none d-lg-block">
-              <li class="<?php if ($url == NULL || $url == "landing" || $url == "Landing") echo "active"; ?>"><a href="<?php echo base_url(); ?>">Beranda</a></li>
+              <li class="<?php if ($url == NULL || $url == "landing" || $url == "Landing") echo "active"; ?>"><a href="<?php echo base_url(); ?>">Home</a></li>
               <li class="<?php if ($url == "etalase" || $url == "Etalase") echo "active"; ?>"><a href="<?php echo base_url('etalase/'); ?>">Etalase</a></li>
               <!-- <li class="has-children">
           <a href="#">Dropdown</a>
@@ -42,7 +42,7 @@
 
               <!-- </ul> -->
               <!--  </li> -->
-              <li class="<?php if ($url == "tentang" || $url == "Tentang") echo "active"; ?>"><a href="<?php echo base_url('tentang/'); ?>">Tentang</a></li>
+              <li class="<?php if ($url == "tentang" || $url == "Tentang") echo "active"; ?>"><a href="<?php echo base_url('tentang/'); ?>">About</a></li>
               <li><?php if ($this->session->userdata("role_id") == 1) { ?>
                   <a href="<?php echo base_url('dashboard/'); ?>"><?php echo $this->session->userdata("nama"); ?></a>
                 <?php } else if ($this->session->userdata("role_id") == 2) { ?>

@@ -3,7 +3,8 @@
         <div class="login-content">
             <div class="login-logo">
                 <a href="<?php echo base_url(); ?>">
-                    <h1 class="align-content">Exodus Drugstore</h1>
+                    <font color="white">
+                    <h1 class="align-content">Exodus Drugstore</h1></font>
                 </a>
             </div>
             <div class="login-form">
