@@ -9,6 +9,10 @@ class Purchase extends CI_Controller
         $this->load->model('Purchase_model');
     }
 
+    public function add_to_cart()
+    {
+    }
+
     public function cart()
     {
         if ($this->session->userdata('id')) {
