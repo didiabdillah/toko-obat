@@ -61,14 +61,14 @@
 
               <li>
                 <div class="icons">
-                  
-                  <a href="#" class="icons-btn d-inline-block bag">
-                  <span class="icon-shopping-bag"></span>
-                  <span class="number">3</span>
-                </a>
-            </div>
+
+                  <a href="<?= base_url('purchase/cart/'); ?>" class="icons-btn d-inline-block bag">
+                    <span class="icon-shopping-bag"></span>
+                    <span class="number">3</span>
+                  </a>
+                </div>
               </li>
-              
+
               <!--  <li><a href="contact.html">Contact</a></li> -->
             </ul>
           </nav>

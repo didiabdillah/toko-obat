@@ -23,5 +23,13 @@ class Purchase extends CI_Controller
 
     public function checkout()
     {
+        $data["title"] = "Checkout Exodus Drugstore";
+        $data["url"] = $this->uri->segment(1);
+        // $data["obat"] = $this->Obat_model->get();
+
+        $this->load->view('templates/landing_header', $data);
+        $this->load->view('templates/landing_navbar', $data);
+        $this->load->view('purchase/checkout');
+        $this->load->view('templates/landing_footer');
     }
 }
