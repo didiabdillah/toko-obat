@@ -36,13 +36,7 @@
                                 <td>$55.00</td>
                                 <td>
                                     <div class="input-group mb-3" style="max-width: 120px;">
-                                        <div class="input-group-prepend">
-                                            <button class="btn btn-outline-primary js-btn-minus" type="button">&minus;</button>
-                                        </div>
-                                        <input type="text" class="form-control text-center" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-outline-primary js-btn-plus" type="button">&plus;</button>
-                                        </div>
+                                        <p class="form-control text-center" aria-label="Example text with button addon" aria-describedby="button-addon1">99</p>
                                     </div>
 
                                 </td>
@@ -60,13 +54,9 @@
                                 <td>$49.00</td>
                                 <td>
                                     <div class="input-group mb-3" style="max-width: 120px;">
-                                        <div class="input-group-prepend">
-                                            <button class="btn btn-outline-primary js-btn-minus" type="button">&minus;</button>
-                                        </div>
-                                        <input type="text" class="form-control text-center" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-outline-primary js-btn-plus" type="button">&plus;</button>
-                                        </div>
+
+                                        <p class="form-control text-center" aria-label="Example text with button addon" aria-describedby="button-addon1">1</p>
+
                                     </div>
 
                                 </td>
