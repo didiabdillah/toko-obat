@@ -9,23 +9,26 @@
             <div class="login-form">
                 <form action="" method="POST">
                     <div class="form-group">
-                        <label>Username/Email address</label>
-                        <input type="text" class="form-control" placeholder="Username/Email" name="email">
+                        <label>Nama</label>
+                        <input type="text" class="form-control" placeholder="Nama" name="nama">
+                    </div>
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input type="text" class="form-control" placeholder="Username" name="username">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="text" class="form-control" placeholder="Email" name="email">
                     </div>
                     <div class="form-group">
                         <label>Password</label>
                         <input type="password" class="form-control" placeholder="Password" name="password">
                     </div>
-                    <div class="checkbox">
-                        <label class="pull-right">
-                            <a href="<?php echo base_url('auth/forgotpass/'); ?>">Forgotten Password?</a>
-                        </label>
 
-                    </div>
-                    <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Sign in</button>
+                    <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Sign Up</button>
 
                     <div class="register-link m-t-15 text-center">
-                        <p>Don't have account ? <a href="<?php echo base_url('Auth/register'); ?>"> Sign Up Here</a></p>
+                        <p>Have account ? <a href="<?= base_url('auth'); ?>"> Sign In Here</a></p>
                     </div>
                 </form>
             </div>

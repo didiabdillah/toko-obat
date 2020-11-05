@@ -19,6 +19,8 @@ class Auth extends CI_Controller
         if ($this->session->userdata('username')) {
             if ($this->session->userdata('role_id') == 1) {
                 redirect('Dashboard');
+            } else if ($this->session->userdata('role_id') == 2) {
+                redirect('landing');
             }
         }
 
@@ -33,6 +35,36 @@ class Auth extends CI_Controller
         } else {
             //jika validasi sukses
             $this->_login();
+        }
+    }
+
+    public function register()
+    {
+        //Title
+        $data['title'] = "Register - Auth";
+
+        //Cek Ada Session Atau Tidak
+        if ($this->session->userdata('username')) {
+            if ($this->session->userdata('role_id') == 1) {
+                redirect('Dashboard');
+            } else if ($this->session->userdata('role_id') == 2) {
+                redirect('landing');
+            }
+        }
+
+        //Form Validation
+        $this->form_validation->set_rules('nama', 'Nama', 'trim|required');
+        $this->form_validation->set_rules('email', 'Email', 'trim|required');
+        $this->form_validation->set_rules('password', 'Password', 'trim|required');
+
+        if ($this->form_validation->run() == false) {
+            $this->load->view('templates/auth_header', $data);
+            $this->load->view('auth/register', $data);
+            $this->load->view('templates/auth_footer');
+        } else {
+            //jika validasi sukses
+            $this->Auth_model->register();
+            redirect('auth');
         }
     }
 
@@ -62,6 +94,8 @@ class Auth extends CI_Controller
                     //Halaman yang di arahkan
                     if ($user['role_id'] == 1) {
                         redirect('Dashboard');
+                    } else if ($user['role_id'] == 2) {
+                        redirect('landing');
                     } else {
                         redirect('auth');
                     }
