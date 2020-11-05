@@ -42,7 +42,7 @@
 
               <!-- </ul> -->
               <!--  </li> -->
-              <li class="<?php if ($url == "tentang" || $url == "Tentang") echo "active"; ?>"><a href="<?php echo base_url('tentang/'); ?>">About</a></li>
+              
               <li><?php if ($this->session->userdata("role_id") == 1) { ?>
                   <a href="<?php echo base_url('dashboard/'); ?>"><?php echo $this->session->userdata("nama"); ?></a>
                 <?php } else if ($this->session->userdata("role_id") == 2) { ?>
