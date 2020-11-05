@@ -54,6 +54,7 @@ class Auth extends CI_Controller
 
         //Form Validation
         $this->form_validation->set_rules('nama', 'Nama', 'trim|required');
+        $this->form_validation->set_rules('username', 'Nama', 'trim|required');
         $this->form_validation->set_rules('email', 'Email', 'trim|required');
         $this->form_validation->set_rules('password', 'Password', 'trim|required');
 

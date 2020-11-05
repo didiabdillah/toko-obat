@@ -11,10 +11,12 @@
                     <div class="form-group">
                         <label>Username/Email address</label>
                         <input type="text" class="form-control" placeholder="Username/Email" name="email">
+                        <?php echo form_error('email', '<small class="text-danger pl-3">', '</small>'); ?>
                     </div>
                     <div class="form-group">
                         <label>Password</label>
                         <input type="password" class="form-control" placeholder="Password" name="password">
+                        <?php echo form_error('password', '<small class="text-danger pl-3">', '</small>'); ?>
                     </div>
                     <div class="checkbox">
                         <label class="pull-right">
