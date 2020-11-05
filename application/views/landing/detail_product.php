@@ -25,20 +25,21 @@
 
 
 
-        <div class="mb-5">
-          <div class="input-group mb-3" style="max-width: 220px;">
-            <div class="input-group-prepend">
-              <button class="btn btn-outline-primary js-btn-minus" type="button">&minus;</button>
+        <form action="<?= base_url('purchase/cart/'); ?>" method="POST">
+          <div class="mb-5">
+            <div class="input-group mb-3" style="max-width: 220px;">
+              <div class="input-group-prepend">
+                <button class="btn btn-outline-primary js-btn-minus" type="button">&minus;</button>
+              </div>
+              <input type="text" class="form-control text-center" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+              <div class="input-group-append">
+                <button class="btn btn-outline-primary js-btn-plus" type="button">&plus;</button>
+              </div>
             </div>
-            <input type="text" class="form-control text-center" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-            <div class="input-group-append">
-              <button class="btn btn-outline-primary js-btn-plus" type="button">&plus;</button>
-            </div>
+
           </div>
-
-        </div>
-        <p><a href="cart.html" class="buy-now btn btn-sm height-auto px-4 py-3 btn-primary"> Buy </a></p>
-
+          <p><button class="buy-now btn btn-sm height-auto px-4 py-3 btn-primary"> Buy </button></p>
+        </form>
         <div class="mt-5">
           <!-- <ul class="nav nav-pills mb-3 custom-pill" id="pills-tab" role="tablist">
                 <li class="nav-item">

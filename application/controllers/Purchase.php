@@ -11,6 +11,15 @@ class Purchase extends CI_Controller
 
     public function cart()
     {
+        if ($this->session->userdata('id')) {
+            $this->_cart();
+        } else {
+            redirect('auth');
+        }
+    }
+
+    private function _cart()
+    {
         $data["title"] = "Chart Exodus Drugstore";
         $data["url"] = $this->uri->segment(1);
         // $data["obat"] = $this->Obat_model->get();
