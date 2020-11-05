@@ -61,7 +61,8 @@
 
               <li>
                 <div class="icons">
-                <a href="#"class="icons-btn d-inline-block bag">
+                  
+                  <a href="#" class="icons-btn d-inline-block bag">
                   <span class="icon-shopping-bag"></span>
                   <span class="number">3</span>
                 </a>
