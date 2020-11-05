@@ -11,9 +11,9 @@
         <div class="row">
             <div class="col-md-12 text-center">
                 <span class="icon-check_circle display-3 text-success"></span>
-                <h2 class="display-3 text-black">Terimakasih!</h2>
-                <p class="lead mb-5">Pesanan Anda sudah selesai.</p>
-                <p><a href="shop.html" class="btn btn-md height-auto px-4 py-3 btn-primary">Kembali ke Toko</a></p>
+                <h2 class="display-3 text-black">Thank You!</h2>
+                <p class="lead mb-5">Your order was suuccessfully</p>
+                <p><a href="<?php echo base_url('etalase/'); ?>" class="btn btn-md height-auto px-4 py-3 btn-primary">Back to Shop</a></p>
             </div>
         </div>
     </div>

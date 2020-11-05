@@ -13,16 +13,16 @@
                     <?php echo $this->session->flashdata('message'); ?>
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">DATA OBAT</strong>
+                            <strong class="card-title">DATA</strong>
                         </div>
                         <div class="card-body">
                             <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
                                 <thead>
                                     <tr>
-                                        <th>NAMA OBAT</th>
-                                        <th>HARGA</th>
-                                        <th>JUMLAH STOCK</th>
-                                        <th>GAMBAR</th>
+                                        <th>NAME</th>
+                                        <th>PRICE</th>
+                                        <th>QUANTITY</th>
+                                        <th>IMAGE</th>
                                         <th></th>
 
                                     </tr>

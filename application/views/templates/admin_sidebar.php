@@ -19,7 +19,7 @@
 
                  </li>
                  <li class="<?php if ($url == "Obat" || $url == "obat") echo "active"; ?>">
-                     <a href="<?php echo base_url('Obat/'); ?>"> <i class="menu-icon fa fa-table"></i>Data Obat</a>
+                     <a href="<?php echo base_url('Obat/'); ?>"> <i class="menu-icon fa fa-table"></i>Data</a>
                  </li>
 
              </ul>
