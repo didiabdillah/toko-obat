@@ -43,7 +43,6 @@
                 <div class="site-section-heading pt-3 mb-4">
                     <h2 class="text-black">VISI DAN MISI</h2>
                 </div>
-                <
                 <p class="text-black">VISI</p>
                 <p class="text-black" align="justify">Menjadi perusahaan Healthcare pilihan utama yang terintegrasi dan menghasilkan nilai yang berkesinambungan.</p>
                 <p class="text-black" align="justify">MISI</p>
