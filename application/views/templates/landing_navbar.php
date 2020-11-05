@@ -61,11 +61,16 @@
 
               <li>
                 <div class="icons">
-
-                  <a href="<?= base_url('purchase/cart/'); ?>" class="icons-btn d-inline-block bag">
-                    <span class="icon-shopping-bag"></span>
-                    <span class="number">3</span>
-                  </a>
+                  <?php if ($this->session->userdata('id')) { ?>
+                    <a href="<?= base_url('purchase/cart/'); ?>" class="icons-btn d-inline-block bag">
+                      <span class="icon-shopping-bag"></span>
+                      <span class="number">3</span>
+                    </a>
+                  <?php } else { ?>
+                    <a href="<?= base_url('auth'); ?>" class="icons-btn d-inline-block bag">
+                      <span class="icon-shopping-bag"></span>
+                    </a>
+                  <?php } ?>
                 </div>
               </li>
 
