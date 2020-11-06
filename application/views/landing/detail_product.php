@@ -38,7 +38,7 @@
             </div>
 
           </div>
-          <p><button type="submit" class="buy-now btn btn-sm height-auto px-4 py-3 btn-primary"> Buy </button></p>
+          <p><button type="submit" class="buy-now btn btn-sm height-auto px-4 py-3 btn-primary"> Add to Cart </button></p>
         </form>
         <div class="mt-5">
           <div class="tab-content" id="pills-tabContent">
