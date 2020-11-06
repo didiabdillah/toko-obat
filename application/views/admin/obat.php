@@ -13,7 +13,7 @@
                     <?php echo $this->session->flashdata('message'); ?>
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">DATA</strong>
+                            <center><strong class="card-title">DATA</strong></center>
                         </div>
                         <div class="card-body">
                             <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
