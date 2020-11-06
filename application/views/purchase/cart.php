@@ -2,8 +2,8 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12 mb-0">
-        <a href="index.html">Beranda</a> <span class="mx-2 mb-0">/</span>
-        <strong class="text-black">Keranjang</strong>
+        <a href="index.html">Home</a> <span class="mx-2 mb-0">/</span>
+        <strong class="text-black">Cart</strong>
       </div>
     </div>
   </div>
@@ -17,12 +17,12 @@
           <table class="table table-bordered">
             <thead>
               <tr>
-                <th class="product-thumbnail">Gambar</th>
-                <th class="product-name">Produk</th>
-                <th class="product-price">Harga</th>
-                <th class="product-quantity">Jumlah</th>
+                <th class="product-thumbnail">Image</th>
+                <th class="product-name">Product</th>
+                <th class="product-price">Price</th>
+                <th class="product-quantity">Quantity</th>
                 <th class="product-total">Total</th>
-                <th class="product-remove">Hapus</th>
+                <th class="product-remove">Delete</th>
               </tr>
             </thead>
             <tbody>
