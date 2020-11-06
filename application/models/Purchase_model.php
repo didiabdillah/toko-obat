@@ -16,7 +16,7 @@ class Purchase_model extends CI_Model
                 "total" => $new_price
             ];
 
-            $this->db->where('cart_id', $cart["id"]);
+            $this->db->where('cart_id', $cart["cart_id"]);
             $this->db->update('cart', $data);
         } else {
             $data = [

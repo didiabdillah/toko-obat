@@ -71,7 +71,7 @@
                         <span class="number"><?php echo $cart; ?></span>
                       </a>
                     <?php } else { ?>
-                      <a href="<?= base_url('auth'); ?>" class="icons-btn d-inline-block bag">
+                      <a href="<?= base_url('etalase'); ?>" class="icons-btn d-inline-block bag">
                         <span class="icon-shopping-bag"></span>
                       </a>
                     <?php } ?>

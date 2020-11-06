@@ -38,7 +38,7 @@
             </div>
 
           </div>
-          <p><button class="buy-now btn btn-sm height-auto px-4 py-3 btn-primary"> Buy </button></p>
+          <p><button type="submit" class="buy-now btn btn-sm height-auto px-4 py-3 btn-primary"> Buy </button></p>
         </form>
         <div class="mt-5">
           <!-- <ul class="nav nav-pills mb-3 custom-pill" id="pills-tab" role="tablist">
