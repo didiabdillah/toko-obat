@@ -1,12 +1,12 @@
 <div class="bg-light py-3">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 mb-0">
-                <a href="index.html">Beranda</a> <span class="mx-2 mb-0">/</span>
-                <strong class="text-black">Checkout</strong>
-            </div>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 mb-0">
+        <a href="index.html">Beranda</a> <span class="mx-2 mb-0">/</span>
+        <strong class="text-black">Checkout</strong>
+      </div>
     </div>
+  </div>
 </div>
 
 <!-- <div class="site-section">
@@ -219,37 +219,33 @@
             </div> -->
 
 <div class="row mb-5">
-    <div class="col-md-12">
-        <center>
-            <h2 class="h3 mb-3 text-black">Pesanan Anda</h2>
-        </center>
-        <div class="p-3 p-lg-5 border">
-            <table class="table site-block-order-table mb-5">
-                <thead>
-                    <th>Produk</th>
-                    <th>Total</th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Bioderma <strong class="mx-2">x</strong> 1</td>
-                        <td>$55.00</td>
-                    </tr>
-                    <tr>
-                        <td>Ibuprofeen <strong class="mx-2">x</strong> 1</td>
-                        <td>$45.00</td>
-                    </tr>
-                    <tr>
-                        <td class="text-black font-weight-bold"><strong>Cart Subtotal</strong></td>
-                        <td class="text-black">$350.00</td>
-                    </tr>
-                    <tr>
-                        <td class="text-black font-weight-bold"><strong>Order Total</strong></td>
-                        <td class="text-black font-weight-bold"><strong>$350.00</strong></td>
-                    </tr>
-                </tbody>
-            </table>
+  <div class="col-md-12">
+    <center>
+      <h2 class="h3 mb-3 text-black">Pesanan Anda</h2>
+    </center>
+    <div class="p-3 p-lg-5 border">
+      <table class="table site-block-order-table mb-5">
+        <thead>
+          <th>Produk</th>
+          <th>Total</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Bioderma <strong class="mx-2">x</strong> 1</td>
+            <td>$55.00</td>
+          </tr>
+          <tr>
+            <td>Ibuprofeen <strong class="mx-2">x</strong> 1</td>
+            <td>$45.00</td>
+          </tr>
+          <tr>
+            <td class="text-black font-weight-bold"><strong>Order Total</strong></td>
+            <td class="text-black font-weight-bold"><strong>$350.00</strong></td>
+          </tr>
+        </tbody>
+      </table>
 
-            <!-- <div class="border mb-3">
+      <!-- <div class="border mb-3">
                     <h3 class="h6 mb-0"><a class="d-block" data-toggle="collapse" href="#collapsebank" role="button"
                         aria-expanded="false" aria-controls="collapsebank">Direct Bank Transfer</a></h3>
     
@@ -285,13 +281,13 @@
                     </div>
                   </div> -->
 
-            <div class="form-group">
-                <button class="btn btn-primary btn-lg btn-block" onclick="window.location='<?= base_url('purchase/success'); ?>'">Place
-                    Order</button>
-            </div>
+      <div class="form-group">
+        <button class="btn btn-primary btn-lg btn-block" onclick="window.location='<?= base_url('purchase/success'); ?>'">Place
+          Order</button>
+      </div>
 
-        </div>
     </div>
+  </div>
 </div>
 
 </div>
@@ -371,15 +367,15 @@
   </div> -->
 
 <div class="row pt-5 mt-5 text-center">
-    <div class="col-md-12">
-        <p>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy;
-            <script>
-                document.write(new Date().getFullYear());
-            </script> All rights reserved | Exodus Drugstore <i aria-hidden="true"></i>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-        </p>
-    </div>
+  <div class="col-md-12">
+    <p>
+      <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+      Copyright &copy;
+      <script>
+        document.write(new Date().getFullYear());
+      </script> All rights reserved | Exodus Drugstore <i aria-hidden="true"></i>
+      <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+    </p>
+  </div>
 
 </div>

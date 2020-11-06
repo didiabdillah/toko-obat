@@ -37,11 +37,17 @@ class Purchase extends CI_Controller
         }
     }
 
+    public function delete_cart($id)
+    {
+        $this->Purchase_model->deleteCart($id);
+
+        redirect("purchase/cart");
+    }
+
     private function _cart($cart)
     {
         $data["title"] = "Chart Exodus Drugstore";
         $data["url"] = $this->uri->segment(1);
-
 
         $data["cart"] = $cart;
         // $data["obat"] = $this->Obat_model->get();

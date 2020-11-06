@@ -16,7 +16,7 @@ class Purchase_model extends CI_Model
                 "total" => $new_price
             ];
 
-            $this->db->where('id', $cart["id"]);
+            $this->db->where('cart_id', $cart["id"]);
             $this->db->update('cart', $data);
         } else {
             $data = [
@@ -37,5 +37,10 @@ class Purchase_model extends CI_Model
         $this->db->where('user_id', $this->session->userdata["id"]);
         $this->db->join('obat', 'cart.id_obat = obat.id');
         return $this->db->get('cart')->result_array();
+    }
+
+    public function deleteCart($id)
+    {
+        $this->db->delete('cart', ['cart_id' => $id]);
     }
 }

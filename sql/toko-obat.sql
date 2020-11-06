@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 06 Nov 2020 pada 03.31
+-- Waktu pembuatan: 06 Nov 2020 pada 04.03
 -- Versi server: 10.4.13-MariaDB
 -- Versi PHP: 7.4.7
 
@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `cart` (
-  `id` int(11) NOT NULL,
+  `cart_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `id_obat` int(11) NOT NULL,
   `nama_obat` varchar(255) NOT NULL,
@@ -41,9 +41,8 @@ CREATE TABLE `cart` (
 -- Dumping data untuk tabel `cart`
 --
 
-INSERT INTO `cart` (`id`, `user_id`, `id_obat`, `nama_obat`, `harga`, `qty`, `total`) VALUES
-(11, 4, 7, 'Paracetamol', 10000, 3, 30000),
-(12, 4, 5, 'Mefinal', 16000, 1, 16000);
+INSERT INTO `cart` (`cart_id`, `user_id`, `id_obat`, `nama_obat`, `harga`, `qty`, `total`) VALUES
+(13, 4, 7, 'Paracetamol', 10000, 1, 10000);
 
 -- --------------------------------------------------------
 
@@ -136,7 +135,7 @@ INSERT INTO `users` (`id`, `nama`, `username`, `password`, `email`, `role_id`, `
 -- Indeks untuk tabel `cart`
 --
 ALTER TABLE `cart`
-  ADD PRIMARY KEY (`id`),
+  ADD PRIMARY KEY (`cart_id`),
   ADD KEY `user_id` (`user_id`),
   ADD KEY `id_obat` (`id_obat`);
 
@@ -172,7 +171,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT untuk tabel `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT untuk tabel `obat`

@@ -39,7 +39,7 @@
                     <?= $row["qty"]; ?>
                   </td>
                   <td>Rp. <?= $row["total"]; ?></td>
-                  <td><a href="<?= base_url('purchase/delete_cart/') . $row["user_id"] . "/" . $row["id_obat"]; ?>" class="btn btn-primary height-auto btn-sm">X</a></td>
+                  <td><a href="<?= base_url('purchase/delete_cart/') . $row["cart_id"]; ?>" class="btn btn-primary height-auto btn-sm">X</a></td>
                 </tr>
               <?php } ?>
 
