@@ -19,7 +19,10 @@
                 </div>
             </div>
 
-
+               <figure>
+                    <center><img src="<?php echo base_url('assets/img/'); ?>pill.png" alt="Image placeholder" class="img-fluid rounded"></center>
+                        
+                </figure>
         </div>
     </div><!-- .animated -->
 </div><!-- .content -->
