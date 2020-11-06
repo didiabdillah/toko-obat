@@ -42,7 +42,7 @@
 
               <!-- </ul> -->
               <!--  </li> -->
-              
+
               <li><?php if ($this->session->userdata("role_id") == 1) { ?>
                   <a href="<?php echo base_url('dashboard/'); ?>"><?php echo $this->session->userdata("nama"); ?></a>
                 <?php } else if ($this->session->userdata("role_id") == 2) { ?>
@@ -60,12 +60,21 @@
               </li>
 
               <li>
+                <?php
+                $cart = $this->db->get_where('cart', ["user_id" => $this->session->userdata('id')])->num_rows();
+                ?>
                 <div class="icons">
                   <?php if ($this->session->userdata('id')) { ?>
-                    <a href="<?= base_url('purchase/cart/'); ?>" class="icons-btn d-inline-block bag">
-                      <span class="icon-shopping-bag"></span>
-                      <span class="number">3</span>
-                    </a>
+                    <?php if ($cart > 0) { ?>
+                      <a href="<?= base_url('purchase/cart/'); ?>" class="icons-btn d-inline-block bag">
+                        <span class="icon-shopping-bag"></span>
+                        <span class="number"><?php echo $cart; ?></span>
+                      </a>
+                    <?php } else { ?>
+                      <a href="<?= base_url('auth'); ?>" class="icons-btn d-inline-block bag">
+                        <span class="icon-shopping-bag"></span>
+                      </a>
+                    <?php } ?>
                   <?php } else { ?>
                     <a href="<?= base_url('auth'); ?>" class="icons-btn d-inline-block bag">
                       <span class="icon-shopping-bag"></span>

@@ -11,15 +11,19 @@ class Purchase extends CI_Controller
 
     public function add_to_cart($id_product)
     {
-        $data = [
-            "user_id" => $this->session->userdata('id'),
-            "qty" => $this->input->post('qty'),
-            "obat_id" => $id_product
-        ];
+        if ($this->session->userdata('id')) {
+            $data = [
+                "user_id" => $this->session->userdata('id'),
+                "qty" => $this->input->post('qty'),
+                "obat_id" => $id_product
+            ];
 
-        $this->Purchase_model->add_to_cart($data);
+            $this->Purchase_model->add_to_cart($data);
 
-        redirect('etalase/detail/' . $id_product);
+            redirect('etalase/detail/' . $id_product);
+        } else {
+            redirect('auth');
+        }
     }
 
     public function cart()
