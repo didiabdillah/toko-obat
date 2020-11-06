@@ -230,17 +230,19 @@
           <th>Total</th>
         </thead>
         <tbody>
-          <tr>
-            <td>Bioderma <strong class="mx-2">x</strong> 1</td>
-            <td>$55.00</td>
-          </tr>
-          <tr>
-            <td>Ibuprofeen <strong class="mx-2">x</strong> 1</td>
-            <td>$45.00</td>
-          </tr>
+          <?php
+          $total = 0;
+          foreach ($cart as $row) { ?>
+            <tr>
+              <td><?= $row["nama_obat"]; ?><strong class="mx-2">x</strong> <?= $row["qty"]; ?></td>
+              <td>Rp. <?= $row["total"]; ?></td>
+            </tr>
+          <?php
+            $total = $total + $row["total"];
+          } ?>
           <tr>
             <td class="text-black font-weight-bold"><strong>Order Total</strong></td>
-            <td class="text-black font-weight-bold"><strong>$350.00</strong></td>
+            <td class="text-black font-weight-bold"><strong>Rp. <?= $total; ?></strong></td>
           </tr>
         </tbody>
       </table>

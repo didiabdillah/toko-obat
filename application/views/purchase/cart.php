@@ -26,7 +26,9 @@
               </tr>
             </thead>
             <tbody>
-              <?php foreach ($cart as $row) { ?>
+              <?php
+              $total = 0;
+              foreach ($cart as $row) { ?>
                 <tr>
                   <td class="product-thumbnail">
                     <img src="<?= base_url('assets/img/etalase/') . $row["gambar"]; ?>" alt="Image" class="img-fluid">
@@ -41,7 +43,9 @@
                   <td>Rp. <?= $row["total"]; ?></td>
                   <td><a href="<?= base_url('purchase/delete_cart/') . $row["cart_id"]; ?>" class="btn btn-primary height-auto btn-sm">X</a></td>
                 </tr>
-              <?php } ?>
+              <?php
+                $total = $total + $row["total"];
+              } ?>
 
             </tbody>
           </table>
@@ -88,10 +92,6 @@
             <div class="col-md-6 text-right">
               <strong class="text-black">
                 <?php
-                $total = 0;
-                foreach ($cart as $t) {
-                  $total = $total + $t["total"];
-                }
                 echo $total;
                 ?>
               </strong>
