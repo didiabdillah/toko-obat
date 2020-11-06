@@ -4,6 +4,11 @@
             <strong>Add Data</strong>
         </div>
         <div class="card-body card-block">
+            <?php
+            if (@$error) {
+                echo '<div class="alert alert-danger">' . $error . '</div>';
+            }
+            ?>
             <form action="" method="post" class="form-horizontal" enctype="multipart/form-data">
                 <div class="row form-group">
                     <div class="col col-md-2"><label for="nama" class=" form-control-label">Name</label></div>
