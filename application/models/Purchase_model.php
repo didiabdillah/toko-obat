@@ -32,6 +32,26 @@ class Purchase_model extends CI_Model
         }
     }
 
+    public function procced($input)
+    {
+        $cart = $this->db->get_where('cart', ["user_id" => $input["user_id"]])->result_array();
+
+        foreach ($cart as $buy) {
+
+            $obat = $this->db->get_where('obat', ["id" => $buy["id_obat"]])->row_array();
+            $new_stock = $obat["stock"] - $buy["qty"];
+
+            $data = [
+                "stock" => $new_stock
+            ];
+
+            $this->db->where('id', $buy["id_obat"]);
+            $this->db->update('obat', $data);
+
+            $this->db->delete('cart', ['cart_id' => $buy["cart_id"]]);
+        }
+    }
+
     public function getCart()
     {
         $this->db->where('user_id', $this->session->userdata["id"]);

@@ -71,6 +71,18 @@ class Purchase extends CI_Controller
         $this->load->view('templates/landing_footer');
     }
 
+    public function procced()
+    {
+        $user_id = $this->session->userdata('id');
+
+        $data = [
+            "user_id" => $user_id
+        ];
+
+        $this->Purchase_model->procced($data);
+        redirect('purchase/success');
+    }
+
     public function success()
     {
         $data["title"] = "Success Exodus Drugstore";
