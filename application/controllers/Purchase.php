@@ -28,22 +28,27 @@ class Purchase extends CI_Controller
 
     public function cart()
     {
+        $data = $this->Purchase_model->getCart();
+
         if ($this->session->userdata('id')) {
-            $this->_cart();
+            $this->_cart($data);
         } else {
             redirect('auth');
         }
     }
 
-    private function _cart()
+    private function _cart($cart)
     {
         $data["title"] = "Chart Exodus Drugstore";
         $data["url"] = $this->uri->segment(1);
+
+
+        $data["cart"] = $cart;
         // $data["obat"] = $this->Obat_model->get();
 
         $this->load->view('templates/landing_header', $data);
         $this->load->view('templates/landing_navbar', $data);
-        $this->load->view('purchase/cart');
+        $this->load->view('purchase/cart', $data);
         $this->load->view('templates/landing_footer');
     }
 

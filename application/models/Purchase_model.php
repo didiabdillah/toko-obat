@@ -31,4 +31,11 @@ class Purchase_model extends CI_Model
             $this->db->insert('cart', $data);
         }
     }
+
+    public function getCart()
+    {
+        $this->db->where('user_id', $this->session->userdata["id"]);
+        $this->db->join('obat', 'cart.id_obat = obat.id');
+        return $this->db->get('cart')->result_array();
+    }
 }
