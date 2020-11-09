@@ -37,7 +37,7 @@
                                             <td>
                                                 <a href="<?php echo base_url('obat/edit/') . $row["id"]; ?>" class="btn btn-warning m-l-10 m-b-10">Edit</a>
 
-                                                <a href="<?php echo base_url('obat/destroy/') . $row["id"]; ?>" class="btn btn-danger m-l-10 m-b-10">Delete</a>
+                                                <a onClick="return confirm('anda yakin ingin menghapus data');" href="<?php echo base_url('obat/destroy/') . $row["id"]; ?>" class="btn btn-danger m-l-10 m-b-10">Delete</a>
                                             </td>
                                         </tr>
                                     <?php } ?>
