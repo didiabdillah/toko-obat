@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 06, 2020 at 08:00 AM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 7.3.2
+-- Waktu pembuatan: 09 Nov 2020 pada 07.33
+-- Versi server: 10.4.13-MariaDB
+-- Versi PHP: 7.4.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -25,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cart`
+-- Struktur dari tabel `cart`
 --
 
 CREATE TABLE `cart` (
@@ -39,16 +38,18 @@ CREATE TABLE `cart` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `cart`
+-- Dumping data untuk tabel `cart`
 --
 
 INSERT INTO `cart` (`cart_id`, `user_id`, `id_obat`, `nama_obat`, `harga`, `qty`, `total`) VALUES
-(13, 4, 7, 'Paracetamol', 10000, 1, 10000);
+(13, 4, 7, 'Paracetamol', 10000, 1, 10000),
+(24, 1, 6, 'Amoxcillin', 7000, 1, 7000),
+(25, 3, 5, 'Mefinal', 16000, 1, 16000);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `obat`
+-- Struktur dari tabel `obat`
 --
 
 CREATE TABLE `obat` (
@@ -61,18 +62,18 @@ CREATE TABLE `obat` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `obat`
+-- Dumping data untuk tabel `obat`
 --
 
 INSERT INTO `obat` (`id`, `nama`, `harga`, `stock`, `deskripsi`, `gambar`) VALUES
 (5, 'Mefinal', 16000, 100, 'Mefinamic Acid 500 Gram', '52c166241e304bbd3db740445dad30bb.jpg'),
-(6, 'Amoxcillin', 7000, 100, 'Antibiotik Membunuh Bakteri', '1ffe29722d3144bd3c88d05b45b15c91.jpg'),
-(7, 'Paracetamol', 10000, 100, 'Obat Meredakan Sakit Kepala', '4b62a5e96bdcf47b4ca39b9dbfd67b20.jpg'),
+(6, 'Amoxcillin', 7000, 99, 'Antibiotik Membunuh Bakteri', '1ffe29722d3144bd3c88d05b45b15c91.jpg'),
+(7, 'Paracetamol', 10000, 100, 'Obat Meredakan Sakit Kepala', 'f482fa0bdc8754fe967e3d1359cd6027.jpg'),
 (8, 'Komik', 5000, 100, 'obat batuk ', 'f9ee923d06e6b908eef2b5f9443a25b6.jpg'),
 (9, 'Betadine', 10000, 100, 'Obat luka', 'c7f421e2b58f6c9f51254428262a23bd.jpg'),
 (10, 'Hansaplast', 5000, 100, 'Penutup luka ', 'b47690527b82f907713e7ece6b3d4d69.jpg'),
 (11, 'Tolak Angin', 18000, 100, 'Tolak Angin bermanfaat untuk mengatasi masuk angin, dengan gejala berupa mual, perut kembung, serta demam atau meriang.', '568cd60dfa06ed86b407e4b4412562c3.jpeg'),
-(12, 'Promag', 9000, 100, 'Promag bermanfaat untuk mengatasi sakit maag, penyakit asam lambung naik, dan perut kembung', '8e798668cdf5d70b2e9886c3fef21651.jpg'),
+(12, 'Promag', 9000, 97, 'Promag bermanfaat untuk mengatasi sakit maag, penyakit asam lambung naik, dan perut kembung', '8e798668cdf5d70b2e9886c3fef21651.jpg'),
 (13, 'Acyclovir ', 5000, 100, 'untuk mengobati infeksi yang disebabkan oleh virus seperti varisela zoster (penyebab herpes zoster atau cacar api) dan herpes simpleks (penyebab herpes genital dan cold sore atau luka melepuh di sekitar bibir).', 'bb1a638425bd843695f08c691c0ebb0e.jpg'),
 (14, 'Bedak Salicyl Kimia Farma', 6000, 100, 'Bedak yang digunakan untuk membantu meredakan gatal-gatal pada kulit akibat biang keringat atau gangguan kulit lainnya', 'a638a25a99c565eadce5e56ac4bf4a4b.jpg'),
 (15, 'Ramipril OGB Dexa Medica', 12000, 100, 'Untuk terapi hipertensi, gagal jantung kongestif sesudah infark miokard akut, terapi tambahan pada diuretik dengan atau tanpa glikosida jantung, untuk menurunkan risiko infark miokard, stroke, kematian KV atau kebutuhan akan prosedur revaskularisasi pada pasien DM dan usia lanjut, perokok, diketahui mikroalbuminuria atau adanya penyakit vaskular sebelumnya.', '3884962540dca82274f831977d784b4e.jpg'),
@@ -81,7 +82,7 @@ INSERT INTO `obat` (`id`, `nama`, `harga`, `stock`, `deskripsi`, `gambar`) VALUE
 -- --------------------------------------------------------
 
 --
--- Table structure for table `reset_token`
+-- Struktur dari tabel `reset_token`
 --
 
 CREATE TABLE `reset_token` (
@@ -92,7 +93,7 @@ CREATE TABLE `reset_token` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `reset_token`
+-- Dumping data untuk tabel `reset_token`
 --
 
 INSERT INTO `reset_token` (`id`, `email`, `token`, `date_created`) VALUES
@@ -103,7 +104,7 @@ INSERT INTO `reset_token` (`id`, `email`, `token`, `date_created`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `role`
+-- Struktur dari tabel `role`
 --
 
 CREATE TABLE `role` (
@@ -114,7 +115,7 @@ CREATE TABLE `role` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Struktur dari tabel `users`
 --
 
 CREATE TABLE `users` (
@@ -128,7 +129,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `users`
+-- Dumping data untuk tabel `users`
 --
 
 INSERT INTO `users` (`id`, `nama`, `username`, `password`, `email`, `role_id`, `gambar`) VALUES
@@ -143,7 +144,7 @@ INSERT INTO `users` (`id`, `nama`, `username`, `password`, `email`, `role_id`, `
 --
 
 --
--- Indexes for table `cart`
+-- Indeks untuk tabel `cart`
 --
 ALTER TABLE `cart`
   ADD PRIMARY KEY (`cart_id`),
@@ -151,63 +152,63 @@ ALTER TABLE `cart`
   ADD KEY `id_obat` (`id_obat`);
 
 --
--- Indexes for table `obat`
+-- Indeks untuk tabel `obat`
 --
 ALTER TABLE `obat`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `reset_token`
+-- Indeks untuk tabel `reset_token`
 --
 ALTER TABLE `reset_token`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `role`
+-- Indeks untuk tabel `role`
 --
 ALTER TABLE `role`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `users`
+-- Indeks untuk tabel `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `cart`
+-- AUTO_INCREMENT untuk tabel `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
--- AUTO_INCREMENT for table `obat`
+-- AUTO_INCREMENT untuk tabel `obat`
 --
 ALTER TABLE `obat`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
--- AUTO_INCREMENT for table `reset_token`
+-- AUTO_INCREMENT untuk tabel `reset_token`
 --
 ALTER TABLE `reset_token`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `cart`
+-- Ketidakleluasaan untuk tabel `cart`
 --
 ALTER TABLE `cart`
   ADD CONSTRAINT `cart_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON UPDATE CASCADE,
